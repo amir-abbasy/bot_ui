@@ -1,0 +1,23 @@
+.ListItemRowContainer {
+  cursor: pointer;
+}
+
+.goToTradeButton {
+  display: none;
+  padding: 10px;
+  /* padding-left: 50px; */
+  color: white;
+  font-weight: bold;
+}
+.ListItemRowContainer:hover .goToTradeButton {
+  background-color: rgb(59 130 246 );
+  display: flex;
+}
+.ListItemRowContainer:hover .hideOnHover {
+  display: none;
+}
+
+
+.lodaing{
+  transform: scale(2);
+}
