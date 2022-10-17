@@ -61,7 +61,7 @@ export default function App() {
 
   const chart_config ={
     // "autosize": true,
-    "symbol": "BTC/USDT",
+    "symbol":  "BINANCE:BTCUSDT",
     "interval": "15",
     "timezone": "Etc/UTC",
     "theme": "light",
