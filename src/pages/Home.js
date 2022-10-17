@@ -4,7 +4,6 @@ import { io } from 'socket.io-client'
 import { Header, Footer, FilterBox } from '../components'
 import exchanges from '../global/exchanges'
 import config from '../global/config'
-import ViewMore from './ViewMore'
 
 var markets_ = [
   {
