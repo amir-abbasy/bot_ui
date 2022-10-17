@@ -3,9 +3,16 @@ import { DropDown, Input, Header, TradingView } from '../components'
 import { useContext } from 'react'
 import DataContext from '../store/DataContext'
 import { useRouter } from 'next/router'
-import exchanges_list, { getExchange } from '../global/exchanges'
+// import exchanges_list, { getExchange } from '../global/exchanges'
 import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
+import dynamic from "next/dynamic";
 
+const AdvancedRealTimeChartNoSSR = dynamic(
+  () => import("react-ts-tradingview-widgets").then((w) => w.AdvancedRealTimeChart),
+  {
+    ssr: false,
+  }
+);
 
 
 import { BinanceClient } from 'ccxws'
@@ -83,7 +90,7 @@ export default function App() {
     <>
       <Header />
       <div class="flex p-4">
-        <AdvancedRealTimeChart {...chart_config} />
+        <AdvancedRealTimeChartNoSSR {...chart_config} />
         <div class='p-4'>
           <p class="flex items-center">
         <span class="material-symbols-outlined mr-4">
